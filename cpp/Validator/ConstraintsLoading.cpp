@@ -3,6 +3,7 @@
 #include "ConstraintsLoading.h"
 #include "Item.h"
 #include "Write.h"
+#include <cmath>
 
 bool validator::ConstraintsLoading::checkLoadingConstraints(Solution& solution, const ConstraintSet& cSet, Instance& instance, const bool& msg) {
 	const unsigned int scaleFactor = getScaleFactor(instance.vehicle.h);
@@ -581,5 +582,5 @@ bool validator::ConstraintsLoading::checkReachability(Item& item, Tour& tour, co
 
 int validator::ConstraintsLoading::getScaleFactor(const unsigned int& vehicleH) {
 	unsigned int digits = log10(vehicleH) + 1;
-	return pow(10, digits - 2);	
+	return std::pow(10, digits - 2);	
 }

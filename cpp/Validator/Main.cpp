@@ -6,7 +6,7 @@
 #include "ConstraintsLoading.h"
 #include "ConstraintsRouting.h" 
 
-int main(char* argv[]) {
+int main(void) {
 	validator::Instance	  instance			= validator::Read::readInstanceFile  ("../../Input/Instances/Krebs_Ehmke_Koch_2020/001_n020_m200_bt3.txt");
 	validator::ConstraintSet constraintSet	= validator::Read::readConstraintFile("../../Input/Constraint_Sets/P1.txt", instance.tw);
 	validator::Solution	  solution			= validator::Read::readSolutionFile("../../Input/PackPlan/001_n020_m200_bt3_P1_1.txt", instance);

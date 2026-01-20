@@ -2,6 +2,7 @@
 #include <iostream>
 #include <set>
 #include <algorithm>
+#include <cmath>
 
 bool validator::ConstraintsRouting::checkRoutingConstraints(Solution& solution, const ConstraintSet& cSet, Instance& instance, const bool& msg) {
 	if (!checkTimeWindows(solution, cSet.time_windows, instance, msg)
@@ -94,7 +95,7 @@ bool validator::ConstraintsRouting::checkTimeWindowCustomer(const unsigned int c
 double validator::ConstraintsRouting::calcEuclideanDistance(const float ax, const float ay, const float bx, const float by) {
 	auto x = ax - bx;
 	auto y = ay - by;
-	return sqrt(pow(x, 2) + pow(y, 2));
+	return std::sqrt(std::pow(x, 2) + std::pow(y, 2));
 }
 
 
